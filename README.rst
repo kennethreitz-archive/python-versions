@@ -5,7 +5,6 @@ This is a set of scripts that creates stable builds of Python.
 
 Targeting Heroku only, for now.
 
-
 Versions
 --------
 
@@ -23,3 +22,7 @@ Goals
 - SQLite Support
 - openssl support
 
+Spec
+----
+
+`python.tar.bz2`, which contains PYTHONHOME, including symlinks to python interpreters.
