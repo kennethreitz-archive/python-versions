@@ -65,10 +65,12 @@ fi
 $(pwd)/formula/$FORMULA $PREFIX_PATH | indent
 
 if [ "$ARCHIVE" ]; then
+    echo "------> Archiving $FORMULA"
     tar cjf $ARCHIVE $PREFIX_PATH
 fi
 
 if [ "$S3_BUCKET" ]; then
+    echo "------> Releasing $FORMULA"
     s3put -b $S3_BUCKET $ARCHIVE
 fi
 
