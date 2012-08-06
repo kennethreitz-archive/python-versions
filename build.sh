@@ -13,7 +13,7 @@ function puts-step (){
 
 
 # Argument parsing.
-while getopts ":f:x:p:" opt; do
+while getopts ":f:x:p:r:" opt; do
   case $opt in
     f)
       FORMULA=$OPTARG
@@ -27,6 +27,10 @@ while getopts ":f:x:p:" opt; do
     x)
       ARCHIVE=$OPTARG
       echo "Using archive: $OPTARG" >&2
+      ;;
+    r)
+      S3_BUCKET=$OPTARG
+      echo "Using s3 bucket: $OPTARG" >&2
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
@@ -63,3 +67,8 @@ $(pwd)/formula/$FORMULA $PREFIX_PATH | indent
 if [ "$ARCHIVE" ]; then
     tar cjf $ARCHIVE $PREFIX_PATH
 fi
+
+if [ "$S3_BUCKET" ]; then
+    s3put -b $S3_BUCKET $ARCHIVE
+fi
+
