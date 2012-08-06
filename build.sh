@@ -21,6 +21,7 @@ while getopts ":f:x:p:r:" opt; do
       ;;
     p)
       mkdir -p $OPTARG
+      PREFIX_SHORT_PATH=$OPTARG
       PREFIX_PATH=`cd "$OPTARG"; pwd`
       echo "Using prefix:  $PREFIX_PATH" >&2
       ;;
@@ -66,7 +67,7 @@ $(pwd)/formula/$FORMULA $PREFIX_PATH | indent
 
 if [ "$ARCHIVE" ]; then
     echo "------> Archiving $FORMULA"
-    tar cjf $ARCHIVE $PREFIX_PATH
+    tar cjf $ARCHIVE $PREFIX_SHORT_PATH/
 fi
 
 if [ "$S3_BUCKET" ]; then
