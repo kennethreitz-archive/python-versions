@@ -1,0 +1,1 @@
+heroku run "./build.sh -f $1 -p ./python -x $1.tar.bz2 -r envy-versions"
