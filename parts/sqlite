@@ -4,7 +4,8 @@
 OUT_PREFIX=$1
 SOURCE_TARBALL='http://www.sqlite.org/sqlite-autoconf-3070900.tar.gz'
 
-curl $SOURCE_TARBALL | tar x
+curl $SOURCE_TARBALL | tar xz
+# jx
 mv sqlite-autoconf-3070900 sqlite
 
 cd sqlite
