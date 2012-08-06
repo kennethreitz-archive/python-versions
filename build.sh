@@ -18,10 +18,8 @@ while getopts ":f:x:p:" opt; do
     f)
       FORMULA=$OPTARG
       echo "Using formula: $FORMULA" >&2
-      # echo "-f was triggered, Parameter: $OPTARG" >&2
       ;;
     p)
-      # echo "-p was triggered, Parameter: $OPTARG" >&2
       mkdir -p $OPTARG
       PREFIX_PATH=`cd "$OPTARG"; pwd`
       echo "Using prefix:  $PREFIX_PATH" >&2
