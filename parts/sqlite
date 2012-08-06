@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Usage: $ build.sh <output-dir>
+
+OUT_PREFIX=$1
+SOURCE_TARBALL='http://www.sqlite.org/sqlite-autoconf-3070900.tar.gz'
+
+curl -O $SOURCE_TARBALL
+tar xvvf sqlite-autoconf-3070900.tar.gz
+mv sqlite-autoconf-3070900 sqlite
+
+cd sqlite
+./configure --prefix=$OUT_PREFIX
+make
+make install
