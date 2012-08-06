@@ -12,3 +12,7 @@ cd sqlite
 ./configure --prefix=$OUT_PREFIX
 make
 make install
+
+# Cleanup
+cd ..
+rm -fr sqlite

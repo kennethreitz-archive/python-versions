@@ -63,5 +63,5 @@ fi
 $(pwd)/formula/$FORMULA $PREFIX_PATH | indent
 
 if [ "$ARCHIVE" ]; then
-    tar cjf $ARCHIVE $PREFIX_PATH/
+    tar cjf $ARCHIVE $PREFIX_PATH
 fi
