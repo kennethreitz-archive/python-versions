@@ -9,7 +9,7 @@ echo "Building SQLite..."
 echo "Building Python..."
 SOURCE_TARBALL='http://www.python.org/ftp/python/3.3.0/Python-3.3.0.tar.bz2'
 curl $SOURCE_TARBALL | tar jx
-mv Python-3.3.0b1 src
+mv Python-3.3.0 src
 cd src
 
 ./configure --prefix=$OUT_PREFIX
