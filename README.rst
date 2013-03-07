@@ -1,7 +1,7 @@
 Python Versions
 ===============
 
-This is a set of scripts that creates stable builds of Python.
+This is a set of scripts that creates stable builds of many Pythons.
 
 Targeting Heroku only, for now.
 
@@ -18,10 +18,10 @@ See also, `full list <https://github.com/kennethreitz/python-versions/tree/maste
 Usage
 -----
 
-Once deployed, building a forumla is simple:
+Once deployed, building a forumla is simple::
 
-$ heroku run <forumla>
-"./build.sh -f $1 -p ./python -x $1.tar.bz2 -r envy-versions"
+    $ heroku run <forumla>
+    "./build.sh -f $1 -p ./python -x $1.tar.bz2 -r envy-versions"
 
 Configuration
 -------------
