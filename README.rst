@@ -8,21 +8,31 @@ Targeting Heroku only, for now.
 Versions
 --------
 
-- 2.6.x
-- 2.7.x
-- (3.0.x)
-- (3.1.x)
-- 3.2.x
-- 3.3.x
-- pypy 1.6
+Official support for:
 
-Goals
+- Latest CPython 2.7
+- Latest CPython 3.3
+
+See also, `full list <https://github.com/kennethreitz/python-versions/tree/master/formula>`_.
+
+Usage
 -----
 
-- SQLite Support
-- openssl support
+Once deployed, building a forumla is simple:
 
-Spec
-----
+$ heroku run <forumla>
+"./build.sh -f $1 -p ./python -x $1.tar.bz2 -r envy-versions"
 
-`python.tar.bz2`, which contains PYTHONHOME, including symlinks to python interpreters.
+Configuration
+-------------
+
+Fairly self explanatory:
+
+- ``AWS_ACCESS_KEY_ID``
+- ``AWS_SECRET_ACCESS_KEY``
+
+
+Distribution "Spec"
+-------------------
+
+``runtime-name.tar.bz2``, which contains ``PYTHONHOME``, including symlinks to python interpreters.
