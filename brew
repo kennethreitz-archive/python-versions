@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Usage: $ brew <formula> <bucket>
+# Usage: $ brew <formula>
 
 ./build.sh -f $1 -p ./python
