@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Options: <output-dir>
+
+OUT_PREFIX=$1
+
+echo "Building Python..."
+SOURCE_TARBALL='https://bitbucket.org/pypy/pypy/downloads/pypy-2.0-linux64.tar.bz2'
+curl -L $SOURCE_TARBALL | tar jx
+mv pypy-2.0/* $OUT_PREFIX
+rm -fr pypy-2.0
+
+ln $OUT_PREFIX/bin/pypy $OUT_PREFIX/bin/python
