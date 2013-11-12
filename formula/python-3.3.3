@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Options: <output-dir>
+
+OUT_PREFIX=$1
+
+echo "Building SQLite..."
+./parts/sqlite $OUT_PREFIX
+
+echo "Building Python..."
+SOURCE_TARBALL='http://www.python.org/ftp/python/3.3.3/Python-3.3.3.tar.bz2'
+curl $SOURCE_TARBALL | tar jx
+mv Python-3.3.3 src
+cd src
+
+./configure --prefix=$OUT_PREFIX
+make
+make install
+
+cd ..
+rm -fr src
+ln $OUT_PREFIX/bin/python3 $OUT_PREFIX/bin/python

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Options: <output-dir>
+
+OUT_PREFIX=$1
+
+echo "Building SQLite..."
+./parts/sqlite $OUT_PREFIX
+
+echo "Building Python..."
+SOURCE_TARBALL='http://www.python.org/ftp/python/2.6.7/Python-2.6.7.tar.bz2'
+curl $SOURCE_TARBALL | tar jx
+mv Python-2.6.7 src
+cd src
+
+./configure --prefix=$OUT_PREFIX
+make
+make install
+
+cd ..
+rm -fr src
+ln $OUT_PREFIX/bin/python $OUT_PREFIX/bin/python2
