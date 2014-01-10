@@ -7,9 +7,9 @@ echo "Building SQLite..."
 ./parts/sqlite $OUT_PREFIX
 
 echo "Building Python..."
-SOURCE_TARBALL='http://python.org/ftp/python/2.7.6/Python-2.7.6.tar.bz2'
-curl $SOURCE_TARBALL | tar jx
-mv Python-2.7.6 src
+SOURCE_TARBALL='http://python.org/ftp/python/2.7.6/Python-2.7.6.tgz'
+curl $SOURCE_TARBALL | tar xzf
+mv python src
 cd src
 
 ./configure --prefix=$OUT_PREFIX
