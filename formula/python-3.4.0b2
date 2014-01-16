@@ -12,8 +12,8 @@ curl $SOURCE_TARBALL | tar xz
 mv Python-3.4.0b2 src
 cd src
 
-./configure --prefix=$OUT_PREFIX
-make --with-ensurepip=no
+./configure --prefix=$OUT_PREFIX --with-ensurepip=no
+make
 make install
 
 cd ..
