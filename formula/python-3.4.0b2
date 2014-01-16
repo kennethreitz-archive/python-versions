@@ -13,7 +13,7 @@ mv Python-3.4.0b2 src
 cd src
 
 ./configure --prefix=$OUT_PREFIX
-make
+make --with-ensurepip=no
 make install
 
 cd ..
