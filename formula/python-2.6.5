@@ -8,7 +8,7 @@ echo "Building SQLite..."
 
 echo "Building Python..."
 SOURCE_TARBALL='http://www.python.org/ftp/python/2.6.5/Python-2.6.5.tar.bz2'
-curl $SOURCE_TARBALL | tar jx
+curl -L $SOURCE_TARBALL | tar jx
 mv Python-2.6.5 src
 cd src
 
