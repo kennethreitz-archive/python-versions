@@ -9,7 +9,7 @@ echo "Building SQLite..."
 echo "Building Python..."
 SOURCE_TARBALL='http://www.stackless.com/binaries/stackless-265-export.tar.bz2'
 curl -L $SOURCE_TARBALL | tar xj
-mv stackless-265-export src
+mv python-2.6.5-stackless src
 cd src
 
 ./configure --prefix=$OUT_PREFIX
