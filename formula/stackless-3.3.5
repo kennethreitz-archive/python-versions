@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Options: <output-dir>
+
+OUT_PREFIX=$1
+
+echo "Building SQLite..."
+./parts/sqlite $OUT_PREFIX
+
+echo "Building Python..."
+SOURCE_TARBALL='http://www.stackless.com/binaries/stackless-335-export.tar.bz2'
+curl -L $SOURCE_TARBALL | tar xj
+mv stackless-335-export src
+cd src
+
+./configure --prefix=$OUT_PREFIX
+make
+make install
+
+cd ..
+rm -fr src
