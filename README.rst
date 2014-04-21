@@ -29,14 +29,14 @@ Deployment
 Usage
 -----
 
-Once deployed, building a forumla is simple::
+Once deployed, building a formula is simple::
 
-    $ heroku run ./brew <forumla> <bucket>
+    $ heroku run ./brew <formula> <bucket>
     # Builds specified Python to ``./python``.
 
-Releasing a forumla is simple::
+Releasing a formula is simple::
 
-    $ heroku run ./bottle <forumla> <bucket>
+    $ heroku run ./bottle <formula> <bucket>
     # Builds specified Python and uploads the resulting tarball to the given S3 bucket.
 
 Distribution "Spec"
