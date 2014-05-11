@@ -11,7 +11,7 @@ Versions
 Official support for:
 
 - Latest CPython 2.7
-- Latest CPython 3.3
+- Latest CPython 3.4
 
 See also, `full list <https://github.com/kennethreitz/python-versions/tree/master/formula>`_.
 
