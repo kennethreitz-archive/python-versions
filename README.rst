@@ -1,9 +1,9 @@
 Python Versions
 ===============
 
-This is a set of scripts that creates stable builds of many Pythons.
+This is a set of scripts that creates stable builds of many Pythons. Targeting Heroku only, for now.
 
-Targeting Heroku only, for now.
+**Note**: This code is now deprecated in favor of `bob-builder <http://bob-builder.readthedocs.org/en/latest/>`_ and the `Python Buildpack Build Scripts <https://github.com/heroku/heroku-buildpack-python/tree/master/builds>`_.
 
 Versions
 --------
